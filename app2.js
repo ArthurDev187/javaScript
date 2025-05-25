@@ -39,3 +39,28 @@ if (chute == numeroSecreto) {
     console.log('Valor do número secreto:', numeroSecreto);
     alert('O número secreto era ' + numeroSecreto);
 }
+
+
+
+
+
+
+// Exercício 1:
+
+// let nome = ('Lua');
+// let idade = 10;
+// let numeroDeVendas = 50;
+// let saldoDisponivel = 1000;
+
+// alert('Erro! preencha todos os campos corretamente.');
+// nome = prompt('Digite o seu nome:');
+// idade = prompt('Digite a sua idade:');
+
+// console.log('Nome: ' + nome);
+// console.log('Idade: ' + idade);
+// console.log('Número de vendas: ' + numeroDeVendas);
+// console.log('Saldo Disponivel: ' + saldoDisponivel);
+
+// if (idade >= 18) {
+//     alert('Você pode tirar a carteira de motorista.');
+// }
