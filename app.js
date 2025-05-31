@@ -8,7 +8,7 @@ while (chute != numeroSecreto) {
     chute = prompt('Digite um número: ');
 
     if (chute == numeroSecreto) {
-        alert(`Você acertou o número secreto. (${numeroSecreto}), com ${tentativas} tentativas`);
+        break;
         } else {
             if (chute > numeroSecreto) {
             alert('O número secreto é menor.');
@@ -18,4 +18,6 @@ while (chute != numeroSecreto) {
         tentativas++;
         }
 }
-console.log(`Tentativas: ${tentativas}`)
+
+let palavraTentativa = tentativas > 1 ? 'Tentativas' : 'Tentativa';
+alert(`Isso ai! Você descobriu o número secreto ${numeroSecreto} com ${tentativas} ${palavraTentativa}.`)
