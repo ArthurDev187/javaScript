@@ -1,4 +1,5 @@
-
+let listaNumerosSorteados = [];
+let numeroLimiteLista = 3;
 let numeroSecreto = gerarNumeroAleatorio();
 let tentativas = 1;
 
@@ -26,7 +27,7 @@ function verificarChute() {
     } else {
         if (chute > numeroSecreto) {
             exibirTextoNaTela('p', 'O numero secreto e menor');
-        } else {
+        } else if (chute < numeroSecreto) {
             exibirTextoNaTela('p', 'O numero secreto e maior');
         }
         tentativas++
@@ -35,7 +36,20 @@ function verificarChute() {
 }
 
 function gerarNumeroAleatorio() {
-    return parseInt(Math.random() * 3 + 1);
+    let numeroSorteado =  parseInt(Math.random() * numeroLimiteLista + 1);
+    let tamanhoListaNumerosSorteados = listaNumerosSorteados.length;
+
+    if (tamanhoListaNumerosSorteados == numeroLimiteLista) {
+        listaNumerosSorteados = [];
+    }
+
+    if (listaNumerosSorteados.includes(numeroSorteado)) {
+        gerarNumeroAleatorio();
+    } else {
+        listaNumerosSorteados.push(numeroSorteado);
+        console.log(listaNumerosSorteados);
+        return numeroSorteado;
+    }
 }
 
 function limparCampo() {
